@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary": "#2f3131",
+                        "surface-container-high": "#2a2a2a",
+                        "on-error": "#690005",
+                        "secondary-container": "#454747",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#454747",
+                        "tertiary": "#bfcdff",
+                        "secondary": "#c6c6c7",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "tertiary-fixed": "#dbe1ff",
+                        "surface-bright": "#393939",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-primary-container": "#554300",
+                        "primary-container": "#d4af37",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-dim": "#131313",
+                        "surface-container-highest": "#353534",
+                        "surface-variant": "#353534",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-tertiary": "#082b72",
+                        "on-surface": "#e5e2e1",
+                        "primary": "#f2ca50",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "inverse-primary": "#735c00",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "on-tertiary-fixed": "#00174b",
+                        "on-primary": "#3c2f00",
+                        "tertiary-container": "#97b0ff",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-surface-variant": "#d0c5af",
+                        "on-tertiary-container": "#254188",
+                        "on-background": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "error-container": "#93000a",
+                        "outline-variant": "#4d4635",
+                        "surface-container-lowest": "#0e0e0e",
+                        "background": "#131313",
+                        "outline": "#99907c",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#ffe088",
+                        "on-primary-fixed": "#241a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .gold-gradient {
+            background: linear-gradient(45deg, #f2ca50, #d4af37);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-2xl shadow-black/20">
+<div class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-widest text-white uppercase font-headline">UrbanNest</div>
+<div class="hidden md:flex items-center space-gap-8 gap-x-12">
+<a class="text-yellow-500 border-b-2 border-yellow-500 pb-1 font-headline font-bold tracking-tight" href="#">Properties</a>
+<a class="text-zinc-400 hover:text-white transition-colors font-headline font-bold tracking-tight" href="#">About</a>
+<a class="text-zinc-400 hover:text-white transition-colors font-headline font-bold tracking-tight" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-zinc-400 hover:text-white transition-all duration-300 scale-95 duration-200 ease-in-out font-headline font-bold tracking-tight">Log In</button>
+<button class="gold-gradient text-on-primary px-6 py-2.5 rounded-lg font-bold hover:opacity-90 transition-all">List Property</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section & Title -->
+<header class="px-12 max-w-screen-2xl mx-auto mb-16">
+<h1 class="text-6xl md:text-7xl font-headline font-bold mb-6 tracking-tight">Curated Estates</h1>
+<p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed">Discover a portfolio of architectural masterpieces, where every residence is a testament to high-end design and intentional living.</p>
+</header>
+<!-- Advanced Filters UI -->
+<section class="px-12 max-w-screen-2xl mx-auto mb-12">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-wrap items-end gap-6">
+<div class="flex-1 min-w-[200px]">
+<label class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-3 font-label">Location</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary" data-icon="location_on">location_on</span>
+<input class="w-full bg-surface-container-high border-none rounded-lg py-4 pl-12 pr-4 text-on-surface focus:ring-1 focus:ring-primary/50 placeholder:text-zinc-600 transition-all" placeholder="Search City, Area..." type="text"/>
+</div>
+</div>
+<div class="w-48">
+<label class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-3 font-label">Price Range</label>
+<select class="w-full bg-surface-container-high border-none rounded-lg py-4 px-4 text-on-surface focus:ring-1 focus:ring-primary/50 appearance-none cursor-pointer"><option>₹5Cr - ₹15Cr</option><option>₹15Cr - ₹30Cr</option><option>₹30Cr+</option></select>
+</div>
+<div class="w-48">
+<label class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-3 font-label">Property Type</label>
+<select class="w-full bg-surface-container-high border-none rounded-lg py-4 px-4 text-on-surface focus:ring-1 focus:ring-primary/50 appearance-none cursor-pointer">
+<option>Penthouse</option>
+<option>Modern Villa</option>
+<option>Glass House</option>
+</select>
+</div>
+<div class="w-32">
+<label class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-3 font-label">BHK</label>
+<select class="w-full bg-surface-container-high border-none rounded-lg py-4 px-4 text-on-surface focus:ring-1 focus:ring-primary/50 appearance-none cursor-pointer">
+<option>3+</option>
+<option>4+</option>
+<option>5+</option>
+</select>
+</div>
+<button class="gold-gradient p-4 rounded-lg flex items-center justify-center hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-on-primary" data-icon="search">search</span>
+</button>
+</div>
+</section>
+<!-- Properties Grid -->
+<section class="px-12 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="ultra-modern glass villa with swimming pool at dusk, warm interior lighting reflecting on water, minimalist architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFyG0__S5CivC1R99K4Xd_8E9PvtYG_1Xe98Kgaej9qDnhn9JjrlXI7OhXkkHmCyS3J8RvW-hUD_GUV57c3TLROubEFwP1EhBZtqUzfE07-KQjz2oCBLtHlMSSvD5mIs9EY--zbT_9SlYcLk91r4Bsz-PEz3v-o6adB_3ENXbiZWkckWFnCaoaxMeMMXLUtaOOElrwX-n2Rb0Jpqja1lf0hfJln0gBOYzLKiL3AfpQqYEgRhIeztsGmxkCZ9n-xqWMwKN_6Tyddi8"/>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+<p class="text-primary font-bold tracking-tight">₹12.50 Cr</p>
+</div>
+</div>
+<div class="space-y-3"><span class="material-symbols-outlined text-sm" data-icon="bed">bed</span> 4 BHK</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="high-end minimalist mansion with white concrete walls, vast floor to ceiling windows, clear blue sky background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2A3hpwqK5exbc7odxVu-9ORGd-nleLOb6IhWmtV5NVGJAxoSMS4gTUU52r3f_To_QDCLCAyT9YArZY9ymw0j5Ae9N2xhvCp9Q-VIxhNo1LlSvHZ8F7cYThdrOnHVmixCrJZMheTGM6fioxAss0UHsTTVL3g3NYNS30FbKIaIamR7vnFwpe3zZLEbGCI7OVNgKpVEreNZqQ2mdDR9CMNQPeXEhSf2NgbF-8Vx9HgA2pFLfGhA7g4KOl5NdIQrIZZ3mESc2u77yAGY"/>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+<p class="text-primary font-bold tracking-tight">₹45.00 Cr</p>
+</div>
+</div>
+<div class="space-y-3"><span class="material-symbols-outlined text-sm" data-icon="bed">bed</span> 6 BHK</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="architectural masterpiece home with dramatic cantilevered roof, wooden accents, and lush manicured landscape at golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_3OoJM5Jk9d__PML-jgJ-hBo4NtNcgqYrOYiRtW1c673M5Ao9lnee97frCOYanT-KjcYk-EoMDK_lV97tXUzifMZEMeZlj0GAaO3XgP7nCmzI89UnTRx_nBZr6LK9xVATLEt-HcUE0sek2bg__5CiQc4MzLfoIS-ptk9DZZ1mHFcPS-nvM-aKg-mEIJ1l0rSuoPbvueJgsgMcowe8kqtZb1YzJyQzj27fcCeSw1Y5Xb699RWhYzdl7HjVBwW2YGhBVwt5YyeU2O0"/>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+<p class="text-primary font-bold tracking-tight">₹8.75 Cr</p>
+</div>
+</div>
+<div class="space-y-3"><span class="material-symbols-outlined text-sm" data-icon="bed">bed</span> 3 BHK</div>
+</div>
+<!-- Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="luxury desert retreat with expansive pool and mountain views, minimalist stone exterior and warm accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeJVXqLCC2_uy_jVH9jzINuqVIITGemIhmIma5yfs3Ujfte1y1EsGsk2dN1icOPmvxfwDxvuzIEPRJboX1Mc3ICYFiL35Vvxi7X4-RB23SG5SSbDRslifNKmFSGQoFPPEUSzLVG3RuPlMBxAG8ngnG43iAju3H493MH_yWuArNLdfk2NLTG7wUtR9mhOGF2Vh8oONayKDv_d-vUarfegG-AQYpa56LlOUUcLP8iQohzbub0IcpqCKGolWN7S7XxwXOoZB15Bb0MrI"/>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+<p class="text-primary font-bold tracking-tight">₹15.20 Cr</p>
+</div>
+</div>
+<div class="space-y-3"><span class="material-symbols-outlined text-sm" data-icon="bed">bed</span> 5 BHK</div>
+</div>
+<!-- Card 5 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="ultra modern interior living room with double height ceiling, architectural staircase, and large scale art installation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnize2-zUQUfSdBADZbuubEwlzAT2iDdISZ-oaZOlxlGHmh5575Fnfqo5zuVkiyNMM8XQwwOZfW09T1Z_oHwM13z-jViBPbr9897DmqrRhY3XwGqY8XcWPbUcvVg-cKPos4yoqeJhPeXfQ-hJuPVRwM67qg5oVLV39-XJbIegWyGT82lY8i_0pS_XqjDnjbcW0OqItUzkPZOq_V3jS9rXXuQBbab9PMwve-7RIltsHYy7ih5j4sjXQ5Qgv0xVXIr5_Ndq5NUeyEnA"/>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+<p class="text-primary font-bold tracking-tight">₹32.00 Cr</p>
+</div>
+</div>
+<div class="space-y-3"><span class="material-symbols-outlined text-sm" data-icon="bed">bed</span> 3 BHK</div>
+</div>
+<!-- Card 6 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="modern brutalist villa in forest setting, dark textured concrete walls and massive glass panels overlooking woodland" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdFnn5cTplXRB2fSm5jyhG9KHarFBOXbRSsaCnn_6znaxRp4Yn-7StyLERTyQFD6WyfwZp0Pbz_bAxhXIcEhPfP3ZoN_ZwdEKNda-LjScvSxyA0fGnPBg5VDoV7XVNEVEDiD7R59Ay60_H8YdsBFpVvZFZnnVOQtk5b6w0Br0x5ddlNQwSlqJ4nVnUnZ_1K0o5pIc2g1PjffoU4jWPSktdtymALLzgDQjk_Re9KyWgQ5eZdzo-xlJBXGpShGPwwwN7ueQohLpFHBQ"/>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+<p class="text-primary font-bold tracking-tight">₹6.50 Cr</p>
+</div>
+</div>
+<div class="space-y-3"><span class="material-symbols-outlined text-sm" data-icon="bed">bed</span> 4 BHK</div>
+</div>
+</div>
+</section>
+<!-- Pagination -->
+<section class="mt-20 flex justify-center items-center gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center text-zinc-500 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold shadow-lg shadow-primary/20">1</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center text-zinc-500 hover:bg-surface-container-high transition-all">2</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center text-zinc-500 hover:bg-surface-container-high transition-all">3</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center text-zinc-500 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 dark:bg-black w-full pt-20 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-screen-2xl mx-auto border-t border-zinc-800/50 pt-16">
+<div class="col-span-1">
+<div class="text-xl font-bold text-white mb-4 font-headline uppercase tracking-widest">UrbanNest</div>
+<p class="text-zinc-500 font-body text-sm leading-relaxed max-w-xs">Redefining modern luxury through curated architectural excellence and bespoke realty services.</p>
+</div>
+<div class="space-y-4">
+<h4 class="text-yellow-500 font-semibold font-label text-xs uppercase tracking-widest">Explore</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-yellow-500 font-semibold font-manrope text-sm tracking-wide hover:translate-x-1 transition-transform" href="#">Properties</a>
+<a class="text-zinc-500 hover:text-zinc-200 transition-colors font-manrope text-sm tracking-wide hover:translate-x-1 transition-transform" href="#">About Us</a>
+<a class="text-zinc-500 hover:text-zinc-200 transition-colors font-manrope text-sm tracking-wide hover:translate-x-1 transition-transform" href="#">Contact</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="text-yellow-500 font-semibold font-label text-xs uppercase tracking-widest">Legal</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-zinc-500 hover:text-zinc-200 transition-colors font-manrope text-sm tracking-wide hover:translate-x-1 transition-transform" href="#">Privacy Policy</a>
+<a class="text-zinc-500 hover:text-zinc-200 transition-colors font-manrope text-sm tracking-wide hover:translate-x-1 transition-transform" href="#">Terms of Service</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="text-yellow-500 font-semibold font-label text-xs uppercase tracking-widest">Newsletter</h4>
+<div class="flex bg-zinc-900 rounded-lg p-1">
+<input class="bg-transparent border-none focus:ring-0 text-sm px-4 py-2 w-full text-zinc-300" placeholder="Your email" type="email"/>
+<button class="gold-gradient p-2 rounded-md">
+<span class="material-symbols-outlined text-on-primary text-sm" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 mt-20 pt-8 border-t border-zinc-900 text-center">
+<p class="text-zinc-600 font-manrope text-sm tracking-wide">© 2024 UrbanNest Realty. Architectural Excellence.</p>
+</div>
+</footer>
+</body></html>

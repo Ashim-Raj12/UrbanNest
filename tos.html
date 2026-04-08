@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-fixed-dim": "#c6c6c7",
+                "on-secondary-container": "#b4b5b5",
+                "on-secondary-fixed-variant": "#454747",
+                "error-container": "#93000a",
+                "on-surface": "#e5e2e1",
+                "on-primary-fixed-variant": "#574500",
+                "surface-bright": "#393939",
+                "inverse-surface": "#e5e2e1",
+                "on-tertiary-fixed-variant": "#27438a",
+                "on-primary": "#3c2f00",
+                "tertiary-fixed": "#dbe1ff",
+                "surface-variant": "#353534",
+                "surface-container-highest": "#353534",
+                "on-error": "#690005",
+                "on-secondary": "#2f3131",
+                "primary-fixed-dim": "#e9c349",
+                "on-primary-fixed": "#241a00",
+                "primary-fixed": "#ffe088",
+                "on-error-container": "#ffdad6",
+                "secondary-container": "#454747",
+                "surface-container-high": "#2a2a2a",
+                "surface-container-low": "#1c1b1b",
+                "on-background": "#e5e2e1",
+                "surface": "#131313",
+                "on-tertiary-container": "#254188",
+                "on-surface-variant": "#d0c5af",
+                "on-primary-container": "#554300",
+                "surface-container-lowest": "#0e0e0e",
+                "on-tertiary-fixed": "#00174b",
+                "tertiary": "#bfcdff",
+                "secondary-fixed": "#e2e2e2",
+                "inverse-primary": "#735c00",
+                "background": "#131313",
+                "surface-tint": "#e9c349",
+                "inverse-on-surface": "#313030",
+                "primary": "#f2ca50",
+                "on-secondary-fixed": "#1a1c1c",
+                "surface-dim": "#131313",
+                "secondary": "#c6c6c7",
+                "outline": "#99907c",
+                "surface-container": "#201f1f",
+                "on-tertiary": "#082b72",
+                "error": "#ffb4ab",
+                "tertiary-container": "#97b0ff",
+                "tertiary-fixed-dim": "#b4c5ff",
+                "primary-container": "#d4af37",
+                "outline-variant": "#4d4635"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Noto Serif"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #131313;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif', serif;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 4rem;
+        }
+        @media (max-width: 768px) {
+            .editorial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-xl shadow-stone-950/20">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-stone-50 dark:text-stone-100 uppercase">
+                ARCHITECTURAL CURATOR
+            </div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-stone-400 hover:text-stone-100 transition-colors font-label font-semibold tracking-wider text-sm" href="#">Portfolio</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors font-label font-semibold tracking-wider text-sm" href="#">Residential</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors font-label font-semibold tracking-wider text-sm" href="#">Estates</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors font-label font-semibold tracking-wider text-sm" href="#">About</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors font-label font-semibold tracking-wider text-sm" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-md font-label font-bold text-sm uppercase tracking-widest active:scale-95 duration-150 transition-all">
+                    Inquire
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Hero Title Section -->
+<header class="mb-24 max-w-3xl">
+<h1 class="text-6xl md:text-7xl font-bold text-on-surface leading-tight mb-6">
+                Terms of Engagement
+            </h1>
+<p class="text-xl font-body text-on-surface-variant leading-relaxed">
+                Defining the standard of our professional relationship.
+            </p>
+<div class="mt-12 h-px w-24 bg-primary"></div>
+</header>
+<!-- Main Content Area with Editorial Layout -->
+<div class="editorial-grid">
+<!-- Sidebar Navigation -->
+<aside class="hidden md:block">
+<nav class="sticky top-40 space-y-8">
+<div>
+<span class="text-[10px] uppercase tracking-[0.3em] font-bold text-primary mb-6 block">Quick Navigation</span>
+<ul class="space-y-4 font-label font-semibold text-sm">
+<li><a class="text-yellow-500 border-b-2 border-yellow-500 pb-1" href="#acceptance">Acceptance</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-colors" href="#site-use">Use of Site</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-colors" href="#intellectual-property">Intellectual Property</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-colors" href="#liability">Limitation of Liability</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-colors" href="#governing-law">Governing Law</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-colors" href="#contact">Legal Contact</a></li>
+</ul>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<p class="text-xs text-on-surface-variant italic leading-relaxed">
+                            Last Updated: October 24, 2024. UrbanNest Realty reserves the right to modify these terms without prior notice.
+                        </p>
+</div>
+</nav>
+</aside>
+<!-- Terms Content -->
+<article class="space-y-20 font-body text-on-surface-variant leading-loose">
+<section class="max-w-2xl" id="acceptance">
+<h2 class="text-3xl font-semibold text-on-surface mb-8">1. Acceptance of Terms</h2>
+<p class="mb-6">
+                        By accessing the Architectural Curator platform, operated under the brand name UrbanNest Realty, you agree to be bound by these Terms of Engagement. These terms represent a legally binding agreement between you and UrbanNest Realty.
+                    </p>
+<p>
+                        If you do not agree with any part of these terms, you are prohibited from using our services or accessing the digital property showcases presented herein.
+                    </p>
+</section>
+<section class="max-w-2xl" id="site-use">
+<h2 class="text-3xl font-semibold text-on-surface mb-8">2. Use of Site &amp; Services</h2>
+<p class="mb-6">
+                        The content provided on this platform is for curated editorial and informational purposes regarding high-end real estate listings and architectural designs. 
+                    </p>
+<ul class="space-y-4 list-disc pl-5 marker:text-primary">
+<li>Users must be at least 18 years of age.</li>
+<li>Automated data scraping or harvesting is strictly prohibited.</li>
+<li>Any inquiries made through the "Inquire" function must be bona fide.</li>
+</ul>
+</section>
+<!-- Asymmetric Featured Block -->
+<section class="relative" id="intellectual-property">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-semibold text-on-surface mb-8">3. Intellectual Property</h2>
+<p class="mb-6">
+                                All architectural renderings, photography, floor plans, and textual descriptions are the exclusive intellectual property of UrbanNest Realty or its partners. 
+                            </p>
+<p>
+                                Reproduction, distribution, or commercial exploitation of these materials without express written consent constitutes a violation of the Copyright Act, 1957.
+                            </p>
+</div>
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-700" data-alt="dramatic architectural interior of a luxury minimalist home with golden hour sunlight hitting concrete walls and floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMyXDetWdfLMqRLCMBiH1uVHELkpMsDefnkqCyd5uEi-GTpxF78agBoBftMb_NwWY-WsilyO5fvjWd4UaxoNQHDlVyqnZQA_a2tz1g9SRMLdwdsZjYC7l68dEbiORz0toD31sHV388r1LSrkAQ581TcVI7UbAt-TvNseSWWJQEEWc-4xDq8lWjIgt80_NSLG0Z6TKRAaaBfErHPZ4SggOu7QRufvNnUCEQJd5fHzV4oomrFYuWG6o0Rplr33u7r4RYfTUrFPbXzqc"/>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-low p-12 rounded-xl" id="liability">
+<h2 class="text-3xl font-semibold text-on-surface mb-8">4. Limitation of Liability</h2>
+<p class="mb-6">
+                        UrbanNest Realty provides these listings on an "as-is" basis. While we strive for architectural precision, we do not warrant that property descriptions or images are free of error. 
+                    </p>
+<p>
+                        To the maximum extent permitted by law, UrbanNest Realty shall not be liable for any indirect, incidental, or consequential damages resulting from your use of the site or the reliance upon the architectural data provided.
+                    </p>
+</section>
+<section class="max-w-2xl" id="governing-law">
+<h2 class="text-3xl font-semibold text-on-surface mb-8">5. Governing Law &amp; Jurisdiction</h2>
+<p class="mb-6">
+                        These Terms of Engagement are governed by and construed in accordance with the <strong>Laws of India</strong>. 
+                    </p>
+<div class="p-8 border-l-4 border-primary bg-surface-container-highest/30">
+<p class="text-on-surface italic">
+                            "Any disputes arising out of or in connection with these terms shall be subject to the exclusive jurisdiction of the courts in Mumbai, Maharashtra."
+                        </p>
+</div>
+</section>
+<section class="pt-12 border-t border-outline-variant/20" id="contact">
+<h2 class="text-3xl font-semibold text-on-surface mb-8">Legal Inquiries</h2>
+<p class="mb-8">
+                        For all legal correspondence regarding these terms or intellectual property rights, please contact our counsel:
+                    </p>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-on-surface">legal@urbannest.in</span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-on-surface">Nariman Point, Mumbai, India</span>
+</div>
+</div>
+</section>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 w-full border-t border-stone-800/30">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full space-y-8 md:space-y-0 max-w-7xl mx-auto">
+<div class="flex flex-col space-y-4">
+<div class="text-lg font-semibold text-stone-50 uppercase tracking-widest">
+                    ARCHITECTURAL CURATOR
+                </div>
+<p class="text-[10px] text-stone-500 font-label tracking-widest uppercase">
+                    © 2024 Architectural Curator. All rights reserved.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12 font-label text-xs uppercase tracking-widest">
+<a class="text-yellow-500 font-bold transition-colors" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-stone-300 transition-colors" href="#">Terms of Service</a>
+<a class="text-stone-500 hover:text-stone-300 transition-colors" href="#">Accessibility</a>
+<a class="text-stone-500 hover:text-stone-300 transition-colors" href="#">Sitemap</a>
+<a class="text-stone-500 hover:text-stone-300 transition-colors" href="#">Cookie Settings</a>
+</div>
+</div>
+</footer>
+</body></html>
